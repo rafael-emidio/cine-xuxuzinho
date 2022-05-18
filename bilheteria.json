@@ -1,0 +1,142 @@
+{
+  "usuarios": [
+    {
+      "id": 1,
+      "usuario": "admin",
+      "senha": "admin"
+    },
+    {
+      "usuario": "teste",
+      "senha": "teste",
+      "id": 6
+    }
+  ],
+  "generos": [
+    {
+      "genero": "Comédia",
+      "id": 1
+    },
+    {
+      "genero": "Ação",
+      "id": 2
+    }
+  ],
+  "salas": [
+    {
+      "lotacao_maxima": 29,
+      "id": 1
+    },
+    {
+      "lotacao_maxima": "50",
+      "id": 2
+    },
+    {
+      "lotacao_maxima": "10",
+      "id": 3
+    }
+  ],
+  "tipoingresso": [
+    {
+      "id": 1,
+      "descricao": "Inteira",
+      "valor": 20
+    },
+    {
+      "id": 2,
+      "descricao": "Meia",
+      "valor": 10
+    },
+    {
+      "descricao": "Isento",
+      "valor": "0",
+      "id": 3
+    }
+  ],
+  "filmes": [
+    {
+      "id": 1,
+      "titulo": "Vingadores: Ultimato",
+      "ano_lancamento": 2019,
+      "idioma": "pt-BR",
+      "duracao": "3h 2m",
+      "sinopse": "Após Thanos eliminar metade das criaturas vivas, os Vingadores têm de lidar com a perda de amigos e entes queridos. Com Tony Stark vagando perdido no espaço sem água e comida, Steve Rogers e Natasha Romanov lideram a resistência contra o titã louco.",
+      "poster_link": "http://t0.gstatic.com/images?q=tbn:ANd9GcQMwtU95JygcmCq4e3XPpL9W0ATjGFoQCQm16dbpIp7BM36B7lH",
+      "trailer_link": "https://youtu.be/-4VRbM-UHew"
+    },
+    {
+      "id": 2,
+      "titulo": "Toy Story",
+      "ano_lancamento": 2019,
+      "idioma": "pt-BR",
+      "duracao": "3h 2m",
+      "sinopse": "Apó das criaturas vivas, os Vingadores têm de lidar com a perda de amigos e entes queridos. Com Tony Stark vagando perdido no espaço sem água e comida, Steve Rogers e Natasha Romanov lideram a resistência contra o titã louco.",
+      "poster_link": "http://t0.gstatic.com/images?q=tbn:ANd9GcQMwtU95JygcmCq4e3XPpL9W0ATjGFoQCQm16dbpIp7BM36B7lH",
+      "trailer_link": "https://youtu.be/-4VRbM-UHew"
+    },
+    {
+      "titulo": "a",
+      "ano_lancamento": 1999,
+      "idioma": "a",
+      "duracao": "a",
+      "sinopse": "a",
+      "poster_link": "a",
+      "trailer_link": "a",
+      "id": 3
+    }
+  ],
+  "emcartaz": [
+    {
+      "id": 1,
+      "sala_id": 1,
+      "filme_id": 1,
+      "horario": "15 horas",
+      "ativo": true
+    },
+    {
+      "sala_id": 1,
+      "filme_id": 2,
+      "horario": "22 Horas",
+      "ativo": true,
+      "id": 2
+    },
+    {
+      "sala_id": 1,
+      "filme_id": 1,
+      "horario": "18 Horas",
+      "ativo": true,
+      "id": 3
+    }
+  ],
+  "bilheterias": [
+    {
+      "id": 1,
+      "emcartaz_id": 1,
+      "tipoingresso_id": 1,
+      "quantidade": 2
+    },
+    {
+      "id": 2,
+      "emcartaz_id": 1,
+      "tipoingresso_id": 2,
+      "quantidade": 1
+    },
+    {
+      "emcartaz_id": 3,
+      "tipoingresso_id": 1,
+      "quantidade": -1,
+      "id": 3
+    },
+    {
+      "emcartaz_id": 2,
+      "tipoingresso_id": 1,
+      "quantidade": 12,
+      "id": 4
+    },
+    {
+      "emcartaz_id": 1,
+      "tipoingresso_id": 3,
+      "quantidade": 1,
+      "id": 5
+    }
+  ]
+}

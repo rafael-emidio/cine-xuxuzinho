@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+   <head>
+      <meta charset="UTF-8">
+      <title>Cine Xuxuzinho</title>
+      <link rel="icon" type="imagem/png" href="../img/logo.png" />
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+      <script type="text/javascript" src="gFilmes.js"></script>
+   </head>
+   <body>
+      <nav class="navbar navbar-expand-lg navbar navbar-dark bg-primary">
+         <a class="navbar-brand" href="../index.html"><img src="../img/logo.png" alt="Logo do Cine Xuxuzinho" width="44px" height="55px"></a>
+         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+         <span class="navbar-toggler-icon"></span>
+         </button>        
+         <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+               <li class="nav-item active" >
+                  <a href="../index.html" style="text-decoration:none;"><span class="nav-link" style="color: black;"><b>Cine Xuxuzinho</b></span></a>
+               </li>
+               <li class="nav-item active">
+                  <a class="nav-link" href="../index.html">Home</a>
+               </li>
+               <li class="nav-item active">
+                  <a class="nav-link" href="../Bilheteiro/Bilheteiro.html">Bilheteria</a>
+               </li>
+               <li class="nav-item active dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Gerencia</a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                     <a class="dropdown-item" href="../Filmes/gFilmes.html">Filmes</a>
+                     <div class="dropdown-divider"></div>
+                     <a class="dropdown-item" href="../Salas/gSalas.html">Salas</a>
+                     <div class="dropdown-divider"></div>
+                     <a class="dropdown-item" href="../Generos/gGeneros.html">Generos</a>
+                     <div class="dropdown-divider"></div>
+                     <a class="dropdown-item" href="../EmCartaz/gEmCartaz.html">Em Cartaz</a>
+                     <div class="dropdown-divider"></div>
+                     <a class="dropdown-item" href="../TipoIngresso/gTipoIngresso.html">Ingressos</a>
+                     <div class="dropdown-divider"></div>
+                     <a class="dropdown-item" href="../Usuarios/gUsuarios.html">Usuarios</a>
+                  </div>
+               </li>
+            </ul>
+         </div>
+      </nav>
+      <div class="d-flex justify-content-center flex-row">
+         <h3><span class="badge badge-info">Gerenciar Filmes: </span></h3>
+      </div>
+      <div style="margin: 0 10%"  >
+         <!-- Botão para acionar modal -->
+         <button type="button" class="btn btn-success" data-toggle="modal" data-target="#modalInsere">
+         Inserir filme
+         </button>
+      </div>
+      <!-- Modal Inserção -->
+      <div class="modal fade bd-example-modal-lg" id="modalInsere" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+         <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+               <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Formulário de inserção</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                  <span aria-hidden="true">&times;</span>
+                  </button>
+               </div>
+               <div class="modal-body">
+                  <div class="form-row">
+                     <div class="col-md-4 mb-3">
+                        <label for="inserirTitulo">Título</label>
+                        <input type="text" class="form-control" id="inserirTitulo" placeholder="Digite o Titulo"  required>
+                     </div>
+                     <div class="col-md-4 mb-3">
+                        <label for="inserirAnoDeLancamento">Ano de lançamento</label>
+                        <input type="number" class="form-control" id="inserirAnoDeLancamento" value="1999" step="1" min="1895" onkeydown="return false"   required>
+                     </div>
+                     <div class="col-md-4 mb-3">
+                        <label for="inserirIdioma">Idioma</label>
+                        <input type="text" class="form-control" id="inserirIdioma" placeholder="Digite o Idioma"  required>
+                     </div>
+                  </div>
+                  <div class="form-row">
+                     <div class="col-md-6 mb-3">
+                        <label for="inserirDuracao">Duração</label>
+                        <input type="text" class="form-control" id="inserirDuracao" placeholder="0h 0m" required>
+                     </div>
+                     <div class="col-md-3 mb-3">
+                        <label for="inserirPoster">Link do Poster</label>
+                        <input type="text" class="form-control" id="inserirPoster" placeholder="Digite o Link do Poster" required>
+                     </div>
+                     <div class="col-md-3 mb-3">
+                        <label for="inserirTrailer">Link do Trailer</label>
+                        <input type="text" class="form-control" id="inserirTrailer" placeholder="Digite o Link do Trailer" required>
+                     </div>
+                  </div>
+                  <div class="form-row">
+                     <div class="col-md-3 mb-3">
+                        <label for="inserirSinopse">Sinopse</label>
+                        <textarea type="textarea" class="form-control" id="inserirSinopse" placeholder="Digite a Sinopse"  style="width: 750px" required></textarea>
+                     </div>
+                  </div>
+                  </form>
+               </div>
+               <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                  <button type="submit" class="btn btn-primary" onclick="criarFilme();">Inserir</button>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!--- Fim Modal -->
+      <!-- Modal Edição -->
+      <div class="modal fade bd-example-modal-lg" id="modalEdita" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+         <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+               <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Formulário de edição</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                  <span aria-hidden="true">&times;</span>
+                  </button>
+               </div>
+               <div class="modal-body">
+                  <div class="form-row">
+                     <div class="col-md-4 mb-3">
+                        <label for="inserirTitulo">ID</label>
+                        <input type="text" class="form-control" id="editarId" placeholder="ID"  required readonly>
+                     </div>
+                     <div class="col-md-4 mb-3">
+                        <label for="inserirTitulo">Título</label>
+                        <input type="text" class="form-control" id="editarTitulo" placeholder="Digite o Titulo"  required>
+                     </div>
+                     <div class="col-md-4 mb-3">
+                        <label for="inserirAnoDeLancamento">Ano de lançamento</label>
+                        <input type="number" class="form-control" id="editarAnoDeLancamento" step="1" min="1895" onkeydown="return false" required>
+                     </div>
+                     <div class="col-md-4 mb-3">
+                        <label for="inserirIdioma">Idioma</label>
+                        <input type="text" class="form-control" id="editarIdioma" placeholder="Digite o Idioma"  required>
+                     </div>
+                  </div>
+                  <div class="form-row">
+                     <div class="col-md-6 mb-3">
+                        <label for="inserirDuracao">Duração</label>
+                        <input type="text" class="form-control" id="editarDuracao" placeholder="0h 0m" required>
+                     </div>
+                     <div class="col-md-3 mb-3">
+                        <label for="inserirPoster">Link do Poster</label>
+                        <input type="text" class="form-control" id="editarPoster" placeholder="Digite o Link do Poster" required>
+                     </div>
+                     <div class="col-md-3 mb-3">
+                        <label for="inserirTrailer">Link do Trailer</label>
+                        <input type="text" class="form-control" id="editarTrailer" placeholder="Digite o Link do Trailer" required>
+                     </div>
+                  </div>
+                  <div class="form-row">
+                     <div class="col-md-3 mb-3">
+                        <label for="inserirSinopse">Sinopse</label>
+                        <textarea type="textarea" class="form-control" id="editarSinopse" placeholder="Digite a Sinopse"  style="width: 750px" required></textarea>
+                     </div>
+                  </div>
+                  </form>
+               </div>
+               <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                  <button type="submit" class="btn btn-primary" onclick="alterarFilme(this);">Editar Filme</button>
+               </div>
+            </div>
+         </div>
+      </div>
+      </div>
+      <!--- Fim Modal -->
+      <div style="margin: 0 10%">
+         <table class="table table-striped" id="tabelaFilmes">
+            <thead>
+               <tr>
+                  <th scope="col">ID</th>
+                  <th scope="col">Titulo</th>
+                  <th scope="col">Ano de Lançamento</th>
+                  <th scope="col">Duração</th>
+                  <th scope="col">Sinopse</th>
+                  <th scope="col">Link do poster</th>
+                  <th scope="col">Link do trailer</th>
+                  <th scope="col">Ação</th>
+               </tr>
+            </thead>
+            <tbody id="lista">
+            </tbody>
+         </table>
+      </div>
+   </body>
+</html>
