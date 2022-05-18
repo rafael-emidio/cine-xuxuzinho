@@ -64,47 +64,37 @@
       "trailer_link": "https://youtu.be/-4VRbM-UHew"
     },
     {
-      "id": 2,
       "titulo": "Toy Story",
       "ano_lancamento": 2019,
-      "idioma": "pt-BR",
+      "idioma": "",
       "duracao": "3h 2m",
-      "sinopse": "Apó das criaturas vivas, os Vingadores têm de lidar com a perda de amigos e entes queridos. Com Tony Stark vagando perdido no espaço sem água e comida, Steve Rogers e Natasha Romanov lideram a resistência contra o titã louco.",
-      "poster_link": "http://t0.gstatic.com/images?q=tbn:ANd9GcQMwtU95JygcmCq4e3XPpL9W0ATjGFoQCQm16dbpIp7BM36B7lH",
-      "trailer_link": "https://youtu.be/-4VRbM-UHew"
-    },
-    {
-      "titulo": "a",
-      "ano_lancamento": 1999,
-      "idioma": "a",
-      "duracao": "a",
-      "sinopse": "a",
-      "poster_link": "a",
-      "trailer_link": "a",
-      "id": 3
+      "sinopse": "Brinquedos massa",
+      "poster_link": "https://s2.glbimg.com/dyeK7On4ZKBg5nl041nYvq_tqRc=/e.glbimg.com/og/ed/f/original/2019/03/19/toy-story-4-poster-1163565.jpeg",
+      "trailer_link": "https://youtu.be/-4VRbM-UHew",
+      "id": 2
     }
   ],
   "emcartaz": [
     {
-      "id": 1,
       "sala_id": 1,
       "filme_id": 1,
       "horario": "15 horas",
-      "ativo": true
+      "ativo": true,
+      "id": 1
     },
     {
       "sala_id": 1,
       "filme_id": 2,
-      "horario": "22 Horas",
-      "ativo": true,
-      "id": 2
+      "horario": "18 Horas",
+      "ativo": false,
+      "id": 3
     },
     {
       "sala_id": 1,
       "filme_id": 1,
-      "horario": "18 Horas",
-      "ativo": true,
-      "id": 3
+      "horario": "21 horas",
+      "ativo": false,
+      "id": 4
     }
   ],
   "bilheterias": [

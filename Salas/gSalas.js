@@ -25,7 +25,6 @@ function carregar(url){
 				id.innerHTML = item.id;
 				lotacao_maxima.innerHTML = item.lotacao_maxima;
 				
-				
 				botaoEditar.innerHTML = "Editar";
 				botaoExcluir.innerHTML = "Excluir";
 				
